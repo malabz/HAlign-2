@@ -1,0 +1,16 @@
+
+./qscore/qscore -test /home/shixiangwan/bench1.0/bali2dna/qscore/genomeSpark.fasta -ref /home/shixiangwan/bench1.0/bali2dna/ref/1aab_ref1 -ignoretestcase -ignorerefcase -perseq
+./qscore/qscore -test /home/shixiangwan/bench1.0/bali2dna/qscore/genomeSpark2.fasta -ref /home/shixiangwan/bench1.0/bali2dna/ref/1aab_ref1 -ignoretestcase -ignorerefcase -perseq
+
+
+./muscle3.8.31_i86linux64 -in /home/shixiangwan/bench1.0/bali2dna/in/1aab_ref1 -out /home/shixiangwan/bench1.0/bali2dna/qscore/1aab_ref1_muscle;
+./qscore/qscore -test /home/shixiangwan/bench1.0/bali2dna/qscore/1aab_ref1_muscle -ref /home/shixiangwan/bench1.0/bali2dna/ref/1aab_ref1 -ignoretestcase -ignorerefcase -perseq
+
+./clustalo-1.2.4-Ubuntu-x86_64 -i /home/shixiangwan/bench1.0/bali2dna/in/1aab_ref1 -o /home/shixiangwan/bench1.0/bali2dna/qscore/1aab_ref1_clustalo;
+./qscore/qscore -test /home/shixiangwan/bench1.0/bali2dna/qscore/1aab_ref1_clustalo -ref /home/shixiangwan/bench1.0/bali2dna/ref/1aab_ref1 -ignoretestcase -ignorerefcase -perseq
+
+
+
+
+
+
