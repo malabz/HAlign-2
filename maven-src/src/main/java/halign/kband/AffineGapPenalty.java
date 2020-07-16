@@ -66,8 +66,14 @@ public class AffineGapPenalty {//完成数组，a,b,c,p的初始化
             }
         }
 
-        for (int i=1;i<=k;i++)
-            c[i][0+k-i]=-(h+g*i);
+//        for (int i=1;i<=k;i++) {
+        for (int i=1;i<=k && i < m;i++) // 20200715 chaojiannan debug
+        {
+//            System.out.println("acc row: " + i +       " of " + m);
+//            System.out.println("acc col: " + (k - i) + " of " + K);
+            c[i][k - i] = -(h + g * i);
+            // c[i][0+k-i]=-(h+g*i);
+        }
 
     }
 
